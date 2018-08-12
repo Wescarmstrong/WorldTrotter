@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XFJ-RA-B81">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Convert-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMu-mG-ERp">
+                                <rect key="frame" x="40" y="120" width="295.5" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r13-jO-AMF">
+                                <rect key="frame" x="131" y="171" width="114" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljo-tN-nFC">
+                                <rect key="frame" x="65.5" y="294" width="245.5" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNh-5J-iCg">
+                                <rect key="frame" x="129" y="212" width="116.5" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FqC-iD-4yg">
+                                <rect key="frame" x="63" y="28" width="250" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="QBO-aR-4BK"/>
+                                </constraints>
+                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="fahrenheitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="bgQ-x1-nmJ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8VE-qU-YKb"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="ljo-tN-nFC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Vp-34-wpW"/>
+                            <constraint firstItem="FqC-iD-4yg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="189-XJ-CWe"/>
+                            <constraint firstItem="RMu-mG-ERp" firstAttribute="top" secondItem="FqC-iD-4yg" secondAttribute="bottom" constant="8" symbolic="YES" id="5zq-hS-TKA"/>
+                            <constraint firstItem="ljo-tN-nFC" firstAttribute="top" secondItem="r13-jO-AMF" secondAttribute="bottom" constant="80" id="ELj-fN-FbT"/>
+                            <constraint firstItem="bNh-5J-iCg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KaA-5b-3XX"/>
+                            <constraint firstItem="ljo-tN-nFC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MxP-mN-X51"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RMu-mG-ERp" secondAttribute="trailing" id="NZV-DL-AAP"/>
+                            <constraint firstItem="r13-jO-AMF" firstAttribute="top" secondItem="RMu-mG-ERp" secondAttribute="bottom" constant="8" symbolic="YES" id="OFh-gu-bv2"/>
+                            <constraint firstItem="RMu-mG-ERp" firstAttribute="centerX" secondItem="FqC-iD-4yg" secondAttribute="centerX" id="OoG-DU-7vT"/>
+                            <constraint firstItem="RMu-mG-ERp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Syb-fK-4WP"/>
+                            <constraint firstItem="r13-jO-AMF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XRG-ct-QTm"/>
+                            <constraint firstItem="bNh-5J-iCg" firstAttribute="top" secondItem="RMu-mG-ERp" secondAttribute="bottom" constant="49" id="aBP-H4-dJN"/>
+                            <constraint firstItem="bNh-5J-iCg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c0h-QQ-FiM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ljo-tN-nFC" secondAttribute="trailing" id="cLI-gz-leJ"/>
+                            <constraint firstItem="FqC-iD-4yg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oka-LE-VXh"/>
+                            <constraint firstItem="r13-jO-AMF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tuZ-KN-wE5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bNh-5J-iCg" secondAttribute="trailing" id="ymq-a8-jtA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="r13-jO-AMF" secondAttribute="trailing" id="zSl-eh-Iqm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Fbe-nS-oQd" appends="YES" id="eRG-f5-4ju"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Convert" image="ConvertIcon" id="8z6-Kp-gWq"/>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="bNh-5J-iCg" id="bjM-PO-B4k"/>
+                        <outlet property="textField" destination="FqC-iD-4yg" id="7VS-oX-IiA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Fbe-nS-oQd">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="dS7-j5-Efx"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-145" y="-367"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="FUk-Qy-nuQ">
+            <objects>
+                <viewController id="je7-jT-SRr" customClass="MapViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="qpt-Zc-daa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgT-tX-ryb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146" y="337"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="0r1-p6-6cy">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XFJ-RA-B81" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HpJ-GB-YMa">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="HBL-Vl-fxS"/>
+                        <segue destination="je7-jT-SRr" kind="relationship" relationship="viewControllers" id="VS3-YV-zUU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAk-5x-cUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-895" y="55"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ConvertIcon" width="48" height="32"/>
+        <image name="MapIcon" width="48" height="32"/>
+    </resources>
+</document>
